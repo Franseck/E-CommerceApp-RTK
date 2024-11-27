@@ -1,17 +1,12 @@
-import Navbar from "../components/Navbar"
+
 import { BrowserRouter } from "react-router-dom"
+import MAin from "../components/MAin"
 
 
 const AppRouter = () => {
   return (
     <div>
-
-
- <Navbar/>
-
-
-
-
+<MAin/>
 
     </div>
   )

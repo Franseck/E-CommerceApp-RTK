@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=The+Girl+Next+Door&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Protest+Guerrilla&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
 
 
 @tailwind base;
@@ -14,6 +14,9 @@
 
 
 @layer components{
-
+.logo{
+  border: 3px solid black;
+  cursor: pointer;
+}
     
     }

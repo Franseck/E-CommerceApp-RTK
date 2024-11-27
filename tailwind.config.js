@@ -4,7 +4,7 @@ module.exports = withMT({
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      colors: {
+           colors: {
         tex :"#803D3B",
         primary : "#E8E0C8",
         primaryDark:"#D3A446",
@@ -15,8 +15,8 @@ module.exports = withMT({
       },
       fontFamily:{
         general : ["Special Elite"],
-        fewer:["Schoolbell"],
-        less :["Annie Use Your Telescope"],
+           less :["Annie Use Your Telescope"],
+        girl :["The Girl Next Door"]
       },
          },
   },
