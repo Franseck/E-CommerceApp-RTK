@@ -9,15 +9,15 @@ const Slider = () => {
     const dispatch = useDispatch();
 
   return (
-    <div className='relative pb-4'>
+    <div className='relative pb-4 flex justify-center items-center text-center '>
 <div>
     {
     sliderData.map((item,index)=>{
         return <div key={item.id} className={parseInt(item.id)=== slideIndex ? "opacity-100 duration-700 ease-in-out scale-100" : "opacity-0 duration-700 ease-in-out scale-95"}>
             <div>
-                {parseInt(item.id)===slideIndex && (<img  className="h-[450px] w-full"src={item.img} alt="shoes" />)}
+                {parseInt(item.id)===slideIndex && (<img  className="h-[500px] w-[100%] rounded-md shadow-lg shadow-gray-900 mt-3" src={item.img} alt="shoes" />)}
                   </div>
-                  <div className="absolute top-44 mx-auto inset-x-1/4">
+                  <div className="absolute top-48 mx-auto inset-x-1/4">
                   <p className="text-white text-2xl font-less font-bold tracking-normal leading-none">
                     {parseInt(item.id)===slideIndex && item.text}
                 </p>
