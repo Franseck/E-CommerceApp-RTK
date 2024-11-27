@@ -6,21 +6,20 @@ const Navbar = () => {
   return (
     <div>
       <div className='bg-black p-3 w-full'>
-        <h3 className='text-white font-girl text-2xl font bold tracking-wider leading-none text-center'>
-Welcome All
+        <h3 className='text-white font-girl text-3xl font bold tracking-wider leading-none text-center'> SECKIN VINTAGE STORE 
         </h3>
       </div>
 <div className='flex justify-around items-center'>
 <div>  
   <img src={logo} alt="logo" className='logo h-24 w-full rounded-2xl'/>
 </div>
-<div className='flex flex-row items-center'>
-  <button className=' font-girl text-md font bold leading-none text-center'>Logout</button>
+<div className='flex flex-row items-center gap-5'>
   <div className='flex flex-row items-center'>
-  <svg 
+  <button className=' font-girl text-md font bold leading-none text-center'>Logout</button>
+    <svg 
   xmlns="http://www.w3.org/2000/svg" 
   fill="none" 
-  viewBox="0 2 18 24" 
+  viewBox="0 2 16 24" 
   strokeWidth="1.5" 
   stroke="currentColor" 
   className="size-5">
@@ -28,6 +27,8 @@ Welcome All
   strokeLinejoin="round" 
   d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
 </svg>
+</div>
+<div className='flex items-center text-center cursor-pointer'>
 <p className='ml-3 font-girl text-md font bold leading-none text-center'>Wish List</p>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 3 16 20" fill="currentColor" className="size-5">
   <path d="m9.653 16.915-.005-.003-.019-.01a20.759 20.759 0 0 1-1.162-.682 22.045 22.045 0 0 1-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 0 1 8-2.828A4.5 4.5 0 0 1 18 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 0 1-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 0 1-.69.001l-.002-.001Z" />
