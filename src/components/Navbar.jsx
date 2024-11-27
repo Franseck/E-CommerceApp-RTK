@@ -12,7 +12,7 @@ Welcome All
       </div>
 <div className='flex justify-around items-center'>
 <div>  
-  <img src={logo} alt="logo" className='logo h-28 w-full rounded-2xl mt-2'/>
+  <img src={logo} alt="logo" className='logo h-24 w-full rounded-2xl'/>
 </div>
 <div className='flex flex-row items-center'>
   <button className=' font-girl text-md font bold leading-none text-center'>Logout</button>
@@ -41,7 +41,7 @@ Welcome All
   </div>
 </div>
 </div>
-<div className='bg-black mt-3 p-4 flex justify-around'>
+<div className='bg-black p-4 flex justify-around'>
 <div  className='text-white font-girl text-md font bold tracking-wider leading-none text-center'>
 Free Shipping and Returns
 </div>
@@ -49,7 +49,7 @@ Free Shipping and Returns
 %50 off on Sale Items
 </div>
 <div  className='text-white font-girl text-md font bold tracking-wider leading-none text-center'>
-Select Payment Methods
+Increadible Deals
 </div>
 
 </div>
