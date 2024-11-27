@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* 
-  @layer component adi altina  kendi CSS lerimizi yaziyoyuruz
+  @layer component {}
+  adi altina  kendi CSS lerimizi yaziyoyuruz
   @apply i da ilgili yere tailwind olarak yazabiliyoruz*/
 
 
 @layer components{
-    .loginDiv {
-        background: linear-gradient(90deg, hsla(180, 13%, 58%, 1) 43%, hsla(197, 60%, 29%, 1) 100%);
-        @apply flex justify-center items-center min-h-screen
-    }
+
     
     }
