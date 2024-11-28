@@ -8,14 +8,14 @@ const products = useSelector((state)=>state.products.filteredProducts)
 const {type} = useParams();
 
   return (
-<div className="">
+<div className="bg-blue-gray-300">
       <div className="pt-16">
         <div className="pl-14">
-          <h1 className="text-gray-600 text-4xl font-inter font-bold tracking-normal leading-none">
+          <h1 className="text-gray-600 text-4xl font-girl font-bold tracking-normal leading-none ">
             {type}         
           </h1>
 </div>
-<div className="grid grid-cols-4 justify-items-center py-8 gap-12 ">
+<div className="flex flex-wrap justify-center text-center items-center py-8 gap-10 bg-blue-gray-700 ">
 {
   products.filter((products)=>products.type===type).map((product, index)=> {
     return (   

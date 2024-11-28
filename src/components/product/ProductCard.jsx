@@ -13,19 +13,20 @@ const ProductCard = ({ id, name, text, img, price, colors }) => {
   const dispatch = useDispatch();
   const { type } = useParams();
   return (
-    <Link to={`/filteredProducts/${type}/` + id}>
+    <div className="">
+    <Link to={`/filteredProducts/${type}/` + id} >
       <Card className="w-96 bg-blue-gray-300" >
-        <CardHeader color="red" className="relative h-96">
-          <img src={img} alt="img-blur-shadow" className="h-full w-full" />
+        <CardHeader color="gray" className=" h-96">
+          <img src={img} alt="img-blur-shadow" className="min-h-96 w-full" />
         </CardHeader>
         <CardBody className="text-center">
-          <Typography variant="h5" className="mb-2">
+          <Typography variant="h5" className="mb-2 font-girl">
             {name}
           </Typography>
-          <Typography>{text}</Typography>
+          <Typography className="font-less text-black">{text}</Typography>
         </CardBody>
         <CardFooter divider className="flex items-center justify-between py-3">
-          <Typography variant="small">{price}$</Typography>
+          <Typography variant="small" className="font-general text-blue-gray-900">{price}$</Typography>
           <Typography variant="small" color="gray" className="flex gap-1">
             {colors?.map((color, index) => {
               return (
@@ -40,6 +41,7 @@ const ProductCard = ({ id, name, text, img, price, colors }) => {
         </CardFooter>
       </Card>
     </Link>
+    </div>
   );
 };
 
