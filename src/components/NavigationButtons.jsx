@@ -3,6 +3,7 @@ import { Button } from '@material-tailwind/react'
 import clothes from "../helper/images/clothes.jpg"
 import { filterProducts } from '../features/productSlice';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 
@@ -27,6 +28,7 @@ const NavigationButtons = () => {
         {buttons.map((button, index) => {
           return (
             <div key={index} className="mr-4">
+              <Link to={"/filteredProducts/" + button}>
                 <Button
                   color="gray"
                   size="lg"
@@ -37,7 +39,7 @@ const NavigationButtons = () => {
                  >
                   {button}
                 </Button>
-           
+           </Link>
             </div>
           );
         })}

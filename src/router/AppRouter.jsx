@@ -1,7 +1,7 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import MAin from "../components/MAin"
-import FilteredProducts from "../components/FilteredProducts"
+import FilteredProducts from "../components/product/FilteredProducts"
 
 
 const AppRouter = () => {
