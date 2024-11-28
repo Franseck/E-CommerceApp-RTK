@@ -1,13 +1,19 @@
 
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import MAin from "../components/MAin"
+import FilteredProducts from "../components/FilteredProducts"
 
 
 const AppRouter = () => {
   return (
-    <div>
-<MAin/>
+    <div className="App">
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MAin/>} />
+        <Route path="/FilteredProducts/:type" element={<FilteredProducts/>} />
 
+</Routes>
+</BrowserRouter> 
     </div>
   )
 }

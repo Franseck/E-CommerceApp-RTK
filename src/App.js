@@ -7,8 +7,7 @@ const App = () => {
   return (
     <div>
       <AppRouter/>
-  
-  <ToastContainer/>
+    <ToastContainer/>
     </div>
   )
 }
