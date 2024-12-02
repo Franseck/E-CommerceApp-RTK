@@ -1,10 +1,10 @@
 
-import { Tooltip, Button } from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
-import { useDispatch } from "react-redux";
+
 
 
 const SingleProduct = () => {
@@ -15,7 +15,7 @@ const SingleProduct = () => {
   const [color, setColor] = useState(productColor);
 
   const { id } = useParams();
-  const dispatch = useDispatch();
+
 
   return (
 
