@@ -1,9 +1,11 @@
+
+import { Tooltip, Button } from "@material-tailwind/react";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { Tooltip, Button } from "@material-tailwind/react";
+
 import { useDispatch } from "react-redux";
-import Navbar from "../Navbar";
+
 
 const SingleProduct = () => {
   const product = useSelector((state) => state.products.singleProduct);
@@ -36,7 +38,7 @@ const SingleProduct = () => {
                   <h5 className="text-4xl font-less font-bold tracking-normal leading-none pb-4">
                     {item.name}
                   </h5>
-                  <p className="text-orange-800 text-xl font-general font-bold tracking-normal leading-none pb-4">
+                  <p className="text-orange-900 text-xl font-general font-bold tracking-normal leading-none pb-4">
                     15% OFF
                   </p>
                   <p className="text-gray-600 text-xl font-girl font-bold tracking-normal leading-none pb-4">
@@ -117,10 +119,31 @@ const SingleProduct = () => {
                         );
                       })}
                     </select>
+
+                    </div>
+<div>
+          <Button
+                      color="gray"
+                      size="lg"
+                      variant="outlined"
+                      ripple={true}
+                      className="hover:bg-blue-gray-300 text-orange-900 font-general"
+                    >
+                      Add to Cart
+                    </Button>
                   </div>
+
                   </div>
+
+
+              
+          
+                
+
                       </div>
+
                 </div>
+                
                       </div>
           );
         })}
