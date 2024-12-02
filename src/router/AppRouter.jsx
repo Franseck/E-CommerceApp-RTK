@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import MAin from "../components/MAin"
 import FilteredProducts from "../components/product/FilteredProducts"
+import SingleProduct from "../components/product/SingleProduct"
 
 
 const AppRouter = () => {
@@ -10,8 +11,8 @@ const AppRouter = () => {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<MAin/>} />
-        <Route path="/FilteredProducts/:type" element={<FilteredProducts/>} />
-
+        <Route path="/filteredProducts/:type" element={<FilteredProducts/>} />
+<Route path="/filteredProducts/:type/:id"  element={<SingleProduct/>}/>
 </Routes>
 </BrowserRouter> 
     </div>
