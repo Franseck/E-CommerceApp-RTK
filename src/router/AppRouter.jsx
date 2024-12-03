@@ -5,7 +5,10 @@ import FilteredProducts from "../components/product/FilteredProducts"
 import SingleProduct from "../components/product/SingleProduct"
 
 
+
 const AppRouter = () => {
+
+
   return (
     <div className="App">
       <BrowserRouter>
