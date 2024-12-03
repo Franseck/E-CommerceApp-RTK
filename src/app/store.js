@@ -1,11 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
 import slideReducer from "../features/sliderSlice"
-import productSlice  from '../features/productSlice'
+import productReducer  from '../features/productSlice'
+import cartReducer from "../features/cartSlice"
 
 
 export const store = configureStore({
   reducer: {
 slider:slideReducer,
-products:productSlice,
+products:productReducer,
+cart : cartReducer,
+
   },
 })
