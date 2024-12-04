@@ -8,7 +8,7 @@ import {
 } from "@material-tailwind/react";
 import { Button } from "@material-tailwind/react";
 import { Input } from "@material-tailwind/react";
-import { login } from "../../features/slices/authSlice";
+import { login } from "../features/authSlice";
 import { useDispatch } from "react-redux";
 
 const Login = () => {

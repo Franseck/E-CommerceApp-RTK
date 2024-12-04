@@ -1,14 +1,19 @@
 import Cart from "./Cart"
 import logo from "../assets/Logo.png"
 import React, { useState } from "react";
-
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../features/slices/authSlice";
+import { Avatar } from "@material-tailwind/react";
+import { Tooltip } from "@material-tailwind/react";
 
 
 const Navbar = () => {
-
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
+  const user = useSelector((state) => state.user.user);
+  const { name, image } = user;
   const [open, setOpen] = useState(false);
   const handleOpen = () =>{setOpen(true)};
-
+  const dispatch = useDispatch();
   return (
     <div>
       <div className='bg-black p-3 w-full'>
@@ -42,16 +47,38 @@ const Navbar = () => {
   </div>
   
   <div onClick={handleOpen} className='flex items-center text-center cursor-pointer' >
-    <p className='ml-3 font-girl text-md font bold leading-none text-center '>Shopping Cart</p>
+  {totalAmount > 0 ? (
+              <span className="rounded-full bg-gray-300 px-2 font-inter text-sm mr-1">
+                {totalAmount}
+              </span>
+            ) : (
+   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 2 15 20" fill="currentColor" className="size-4">
   <path fillRule="evenodd" d="M6 5v1H4.667a1.75 1.75 0 0 0-1.743 1.598l-.826 9.5A1.75 1.75 0 0 0 3.84 19H16.16a1.75 1.75 0 0 0 1.743-1.902l-.826-9.5A1.75 1.75 0 0 0 15.333 6H14V5a4 4 0 0 0-8 0Zm4-2.5A2.5 2.5 0 0 0 7.5 5v1h5V5A2.5 2.5 0 0 0 10 2.5ZM7.5 10a2.5 2.5 0 0 0 5 0V8.75a.75.75 0 0 1 1.5 0V10a4 4 0 0 1-8 0V8.75a.75.75 0 0 1 1.5 0V10Z" clipRule="evenodd" />
 </svg>
+            )}
+ <p className='ml-3 font-girl text-md font bold leading-none text-center '>Shopping Cart</p>
 <div>
          {open && <Cart openModal={open} setOpen={setOpen}/>}
             </div>
-
   </div>
- 
+  <div className="flex flex-row items-center cursor-pointer pl-4">
+            {image && (
+              <Avatar
+                src={image}
+                alt="avatar"
+                size="sm"
+                className="mr-2"
+              ></Avatar>
+            )}
+            <div onClick={() => dispatch(logout())}>
+              <Tooltip content="Sign Out" placement="bottom">
+                <p className="font-inter text-sm font-medium tracking-normal leading-none">
+                  Hi {name.charAt("0").toUpperCase() + name.slice(1)}
+                </p>
+              </Tooltip>
+            </div>
+          </div>
 
 </div>
 </div>
