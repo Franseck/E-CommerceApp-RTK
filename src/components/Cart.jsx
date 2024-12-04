@@ -1,20 +1,20 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import {
-
+  Button,
   Dialog,
   DialogHeader,
   DialogBody,
   DialogFooter,
 } from "@material-tailwind/react";
-
-import { useSelector } from "react-redux";
-
+import { Tooltip } from "@material-tailwind/react";
+import { useSelector, useDispatch } from "react-redux";
+import { removeFromCart } from "../features/cartSlice";
 
 const Cart = ({ openModal, setOpen }) => {
   const cart = useSelector((state) => state.cart.cart);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
 
-
+  const dispatch = useDispatch();
   return (
     <div>
       {cart.length > 0 ? (
@@ -49,7 +49,7 @@ const Cart = ({ openModal, setOpen }) => {
                           </h4>
                         </div>
                         <div className="max-w-xs">
-                          <p className="text-black text-xs font-general tracking-normal leading-none pt-2">
+                          <p className="text-black text-xs font-inter tracking-normal leading-none pt-2">
                             {item.text}
                           </p>
                         </div>
@@ -77,7 +77,22 @@ const Cart = ({ openModal, setOpen }) => {
                           Total Item Prices:{" "}
                           <span className="ml-2">{item.totalPrice}$</span>
                         </p>
-                      
+                        <div className="pt-4">
+                          <Tooltip
+                            content="Remove from the Cart"
+                            placement="bottom"
+                          >
+                            <Button
+                              onClick={() => dispatch(removeFromCart(item))}
+                              size="sm"
+                              color="red"
+                              ripple={true}
+                              variant="filled"
+                            >
+                              Remove
+                            </Button>
+                          </Tooltip>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -97,7 +112,7 @@ const Cart = ({ openModal, setOpen }) => {
           <Dialog
             className="border-0 outline-0"
             open={openModal}
-            handler={() => setOpen(true)}
+            handler={() => setOpen(false)}
             animate={{
               mount: { scale: 1, y: 0 },
               unmount: { scale: 0.9, y: -100 },
