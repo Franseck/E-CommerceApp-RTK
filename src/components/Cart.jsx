@@ -1,20 +1,20 @@
 import { Fragment } from "react";
 import {
-  Button,
+
   Dialog,
   DialogHeader,
   DialogBody,
   DialogFooter,
 } from "@material-tailwind/react";
 
-import { useSelector, useDispatch } from "react-redux";
-import { removeFromCart } from "../features/cartSlice";
+import { useSelector } from "react-redux";
+
 
 const Cart = ({ openModal, setOpen }) => {
   const cart = useSelector((state) => state.cart.cart);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
 
-  const dispatch = useDispatch();
+
   return (
     <div>
       {cart.length > 0 ? (
@@ -77,19 +77,7 @@ const Cart = ({ openModal, setOpen }) => {
                           Total Item Prices:{" "}
                           <span className="ml-2">{item.totalPrice}$</span>
                         </p>
-                        <div className="pt-4">
-                   
-                            <Button
-                              onClick={() => dispatch(removeFromCart(item))}
-                              size="sm"
-                              color="red"
-                              ripple={true}
-                              variant="filled"
-                            >
-                              Remove
-                            </Button>
-                    
-                        </div>
+                      
                       </div>
                     </div>
                   </div>
@@ -109,7 +97,7 @@ const Cart = ({ openModal, setOpen }) => {
           <Dialog
             className="border-0 outline-0"
             open={openModal}
-            handler={() => setOpen(false)}
+            handler={() => setOpen(true)}
             animate={{
               mount: { scale: 1, y: 0 },
               unmount: { scale: 0.9, y: -100 },
