@@ -15,10 +15,10 @@ const ProductCard = ({ id, name, text, img, price, colors }) => {
 
   return (
     <Link to={`/filteredProducts/${type}/` + id}>
-      <div className="">
-      <Card className="flex justify-center text-center" onClick={() => dispatch(singleProduct(id))}>
-        <CardHeader color="blue" className="relative h-96 ">
-          <img src={img} alt="img-blur-shadow" className="h-full w-full bg-blue-gray-800" />
+ 
+      <Card className="flex justify-center text-center overflow-hidden" onClick={() => dispatch(singleProduct(id))}>
+        <CardHeader color="red" className="">
+          <img src={img} alt="img-blur-shadow" className="" />
         </CardHeader>
         <CardBody className="text-center bg-blue-gray-300 ">
           <Typography variant="h5" className="mb-2 font-less text-blue-gray-700 text-2xl">
@@ -41,7 +41,7 @@ const ProductCard = ({ id, name, text, img, price, colors }) => {
           </Typography>
         </CardFooter>
       </Card>
-      </div>
+     
     </Link>
   );
 };

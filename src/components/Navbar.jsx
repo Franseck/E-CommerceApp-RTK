@@ -7,8 +7,7 @@ import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const totalAmount = useSelector((state) => state.cart.totalAmount);
-  //const user = useSelector((state) => state.user.user);
-  //const { name, image } = user;
+
   const [open, setOpen] = useState(false);
   const handleOpen = () =>{setOpen(true)};
 

@@ -16,28 +16,27 @@ const SingleProduct = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="flex justify-center bg-blue-gray-400 h-screen items-center text-center py-32">
+    <div className="flex justify-center bg-blue-gray-400 lg:h-screen md:h-screen sm:h-full ">
       {product
         .filter((product) => product.id === id)
         .map((item, index) => {
           return (
-            <div key={index} className="flex justify-center gap-5 items-center text-center flex-wrap  py-20  ">
+            <div key={index} className="flex justify-center gap-5 text-center flex-wrap items-center">
              
                 <img
-                  className="h-[450px] rounded-lg"
+                  className="h-[500px] rounded-lg"
                   src={item.img}
                   alt={item.name}
                 ></img>
          
-              <div className="grow-[3] ">
-                <div className="">
-                  <h5 className="text-2xl font-girl font-bold tracking-normal leading-none pb-4">
+              <div className="flex flex-col">
+                 <h5 className="text-2xl font-girl font-bold tracking-normal leading-none pb-4">
                     {item.name}
                   </h5>
                   <p className="text-red-700 text-xl font-general font-bold  leading-none pb-4">
                     15% OFF
                   </p>
-                  <p className="text-blue-gray-800 text-xl font-less font-bold tracking-normal leading-none pb-4">
+                  <p className="text-blue-gray-800 text-xl font-less font-bold pb-4 w-[250px]">
                     {item.text}
                   </p>
                   <div className="pb-4">
@@ -141,7 +140,7 @@ const SingleProduct = () => {
                       Add to Cart
                     </Button>
                   </div>
-                </div>
+             
               </div>
             </div>
           );

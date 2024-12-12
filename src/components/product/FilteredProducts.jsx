@@ -25,14 +25,14 @@ const FilteredProducts = () => {
           <h1 className="text-gray-600 text-4xl font-girl font-bold tracking-normal leading-none">
             {type}
           </h1>
-          <div className="py-8">
-            <div className="flex flex-wrap justify-center items-center text-center">
+          <div className="py-8 ">
+            <div className="flex  flex-wrap justify-center items-center text-center">
               {genderButtons.map((item, index) => {
                 return (
-                  <div key={index}>
+                  <div key={index} className=" flex justify-center items-center">
                     <Button
                       color="gray"
-                      size="lg"
+                      size="md"
                       variant="outlined"
                       ripple={true}
                       className="text-black hover:bg-gray-300 duration-300 ease-in-out mr-4"
@@ -45,7 +45,7 @@ const FilteredProducts = () => {
               })}
               <Button
                 color="gray"
-                size="lg"
+                size="md"
                 variant="outlined"
                 ripple={true}
                 className="text-black hover:bg-gray-300 duration-300 ease-in-out mr-4"
@@ -57,7 +57,7 @@ const FilteredProducts = () => {
             <div className="pr-14">
               <Button
                 color="gray"
-                size="lg"
+                size="md"
                 variant="outlined"
                 ripple={true}
                 className="text-black hover:bg-gray-300 duration-300 ease-in-out mr-4"
