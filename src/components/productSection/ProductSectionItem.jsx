@@ -5,8 +5,7 @@ import {
   CardBody,
   CardFooter,
   Typography,
-  Tooltip,
-} from "@material-tailwind/react";
+  } from "@material-tailwind/react";
 import { Button } from "@material-tailwind/react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../features/cartSlice";
@@ -62,7 +61,7 @@ const ProductSectionItem = ({
           </div>
         </CardBody>
         <CardFooter className="flex justify-center gap-7 pt-2">
-          <Tooltip content="Add to Cart" placement="bottom">
+          <div content="Add to Cart" placement="bottom">
             <Button
               onClick={() =>
                 dispatch(
@@ -86,7 +85,7 @@ const ProductSectionItem = ({
             >
               Add to Cart
             </Button>
-          </Tooltip>
+          </div>
         </CardFooter>
       </Card>
     </div>

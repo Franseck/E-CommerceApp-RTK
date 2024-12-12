@@ -19,7 +19,7 @@ const NavigationButtons = () => {
         "Bags",
       ];
 
-      const dispatch = useDispatch()
+      const dispatch = useDispatch();
 
 
   return (
