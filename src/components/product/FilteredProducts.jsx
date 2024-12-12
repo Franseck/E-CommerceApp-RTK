@@ -19,14 +19,14 @@ const FilteredProducts = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="bg-blue-gray-800">
+    <div className="bg-blue-gray-800 h-full w-screen">
       <div className="pt-16 ">
-        <div className="pl-14 ">
+        <div className="">
           <h1 className="text-gray-600 text-4xl font-girl font-bold tracking-normal leading-none">
             {type}
           </h1>
-          <div className="flex items-center justify-between py-8">
-            <div className="flex items-center ">
+          <div className="py-8">
+            <div className="flex flex-wrap justify-center items-center text-center">
               {genderButtons.map((item, index) => {
                 return (
                   <div key={index}>
@@ -71,7 +71,7 @@ const FilteredProducts = () => {
         {error ? (
           <Error/>
         ) : (
-          <div className="grid grid-cols-4 justify-items-center py-8 gap-12 ">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 justify-items-center py-8 gap-8 ">
             {products
               .filter((product) => product.type === type)
               .map((product, index) => {

@@ -16,7 +16,7 @@ const SingleProduct = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="flex justify-center bg-blue-gray-400 h-screen items-center text-center">
+    <div className="flex justify-center bg-blue-gray-400 h-screen items-center text-center py-32">
       {product
         .filter((product) => product.id === id)
         .map((item, index) => {
@@ -54,7 +54,7 @@ const SingleProduct = () => {
                           name="size"
                           value={size}
                           onChange={(e) => setSize(e.target.value)}
-                          className="bg-gray-50  block p-2.5 "
+                          className="bg-gray-50  w-40 p-2.5 text-center "
                         >
                           {item.size.map((item, index) => {
                             return (
@@ -79,7 +79,7 @@ const SingleProduct = () => {
                           name="size"
                           value={size}
                           onChange={(e) => setSize(e.target.value)}
-                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          className="bg-gray-50 border w-full p-2.5"
                         >
                           {item?.size?.map((item, index) => {
                             return (
@@ -96,7 +96,7 @@ const SingleProduct = () => {
                   <div className="pb-4">
                     <label
                       htmlFor="color"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      className="block mb-2 text-sm font-medium text-gray-900 "
                     >
                       Pick a color
                     </label>
@@ -105,7 +105,7 @@ const SingleProduct = () => {
                       name="color"
                       value={color}
                       onChange={(e) => setColor(e.target.value)}
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-gray-50 border w-40 p-2.5 text-center "
                     >
                       {item.color.map((color, index) => {
                         return (
